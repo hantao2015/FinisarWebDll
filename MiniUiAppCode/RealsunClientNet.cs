@@ -15,6 +15,7 @@ namespace MiniUiAppCode
 
         public static string strBaseUrl = "http://121.199.9.136:8082/rispweb/";
         private const  string strLoginPage = "rispservice/ajaxSvrLogin.aspx";
+        private const string strExecutePage = "risphost/data/AjaxService.aspx";
         public static Task<Hashtable>  Login(string user, string upass)
         {
             var result = Task<Hashtable>.Factory.StartNew(() =>
@@ -41,6 +42,46 @@ namespace MiniUiAppCode
             return result;
 
         }
+        public static Task<Hashtable> Execute(string method, Hashtable parms)
+        {
+            string strParams="";
+            IEnumerator enu = parms.Keys.GetEnumerator();
+            while (enu.MoveNext())
+            {
+                string parm = enu.Current.ToString() + "=" + Convert.ToString(parms[enu.Current.ToString()]);
+                strParams = strParams + parm + "&";
+            }
+            
+          
+
+
+
+             var result = Task<Hashtable>.Factory.StartNew(() =>
+            {
+                Hashtable ReturnData = new Hashtable();
+                try
+                {
+                    Encoding encoding = Encoding.UTF8;
+                    string strurl = strBaseUrl + strExecutePage;
+
+                    string strJason = PostHttpResponse.GetStream(PostHttpResponse.CreatePostHttpResponseJson(strurl, "", "method=" + method + "&"+strParams + "clienttype=mobile", null, "", encoding, "", ref m_CookieContainer, true), encoding);
+                    ReturnData = (Hashtable)MiniUiAppCode.JSON.Decode(strJason);
+
+                }
+                catch (Exception ex)
+                {
+
+                    ReturnData.Clear();
+                    ReturnData.Add("error", "-1");
+                    ReturnData.Add("message", "client error:" + ex.Message.ToString());
+                }
+                return ReturnData;
+            });
+            return result;
+
+        }
+
+
         
 
     }

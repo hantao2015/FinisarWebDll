@@ -38,6 +38,18 @@
             this.txt_upass = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txt_department = new System.Windows.Forms.TextBox();
+            this.txt_ProductionStage = new System.Windows.Forms.TextBox();
+            this.txt_ProjectCode = new System.Windows.Forms.TextBox();
+            this.txt_StepNo = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.dt_from = new System.Windows.Forms.DateTimePicker();
+            this.dt_to = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -75,6 +87,7 @@
             this.button2.TabIndex = 3;
             this.button2.Text = "1.\t获取部门出勤工时和人头数";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -128,11 +141,123 @@
             this.label3.TabIndex = 9;
             this.label3.Text = "密码";
             // 
+            // txt_department
+            // 
+            this.txt_department.Location = new System.Drawing.Point(402, 134);
+            this.txt_department.Name = "txt_department";
+            this.txt_department.Size = new System.Drawing.Size(259, 21);
+            this.txt_department.TabIndex = 10;
+            this.txt_department.Text = "OSA";
+            // 
+            // txt_ProductionStage
+            // 
+            this.txt_ProductionStage.Location = new System.Drawing.Point(402, 161);
+            this.txt_ProductionStage.Name = "txt_ProductionStage";
+            this.txt_ProductionStage.Size = new System.Drawing.Size(259, 21);
+            this.txt_ProductionStage.TabIndex = 11;
+            this.txt_ProductionStage.Text = "MP";
+            // 
+            // txt_ProjectCode
+            // 
+            this.txt_ProjectCode.Location = new System.Drawing.Point(402, 188);
+            this.txt_ProjectCode.Name = "txt_ProjectCode";
+            this.txt_ProjectCode.Size = new System.Drawing.Size(259, 21);
+            this.txt_ProjectCode.TabIndex = 12;
+            this.txt_ProjectCode.Text = "SH44";
+            // 
+            // txt_StepNo
+            // 
+            this.txt_StepNo.Location = new System.Drawing.Point(402, 215);
+            this.txt_StepNo.Name = "txt_StepNo";
+            this.txt_StepNo.Size = new System.Drawing.Size(259, 21);
+            this.txt_StepNo.TabIndex = 13;
+            this.txt_StepNo.Text = "SH44-01-002";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(337, 139);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(41, 12);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "大部门";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(337, 164);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(53, 12);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "生产阶段";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(337, 194);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(59, 12);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "项目代码 ";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(337, 224);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(53, 12);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "工序代码";
+            // 
+            // dt_from
+            // 
+            this.dt_from.Location = new System.Drawing.Point(412, 259);
+            this.dt_from.Name = "dt_from";
+            this.dt_from.Size = new System.Drawing.Size(200, 21);
+            this.dt_from.TabIndex = 18;
+            // 
+            // dt_to
+            // 
+            this.dt_to.Location = new System.Drawing.Point(412, 298);
+            this.dt_to.Name = "dt_to";
+            this.dt_to.Size = new System.Drawing.Size(200, 21);
+            this.dt_to.TabIndex = 19;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(343, 265);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(29, 12);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "开始";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(349, 307);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(29, 12);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "结束";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(859, 416);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.dt_to);
+            this.Controls.Add(this.dt_from);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txt_StepNo);
+            this.Controls.Add(this.txt_ProjectCode);
+            this.Controls.Add(this.txt_ProductionStage);
+            this.Controls.Add(this.txt_department);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_upass);
@@ -163,6 +288,18 @@
         private System.Windows.Forms.TextBox txt_upass;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txt_department;
+        private System.Windows.Forms.TextBox txt_ProductionStage;
+        private System.Windows.Forms.TextBox txt_ProjectCode;
+        private System.Windows.Forms.TextBox txt_StepNo;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DateTimePicker dt_from;
+        private System.Windows.Forms.DateTimePicker dt_to;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
     }
 }
 

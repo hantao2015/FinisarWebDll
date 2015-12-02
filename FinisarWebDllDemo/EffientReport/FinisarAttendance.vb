@@ -7,7 +7,10 @@
         Public ProjectCode As String = ""
         Public AttendanceHour As Double = 8.0
         Public StepNO As String = ""
-        Public Remark As String = ""
-    End Class
+    Public Remark As String = ""
+    Public Sub New()
+
+    End Sub
+End Class
 
 

@@ -6,7 +6,11 @@ Public Class FinisarHeadCount
         Public ProjectCode As String = ""
         Public Headcount As Double = 0
 
-        Public Remark As String = ""
-    End Class
+    Public Remark As String = ""
+    Public Sub New()
+
+    End Sub
+
+End Class
 
 
