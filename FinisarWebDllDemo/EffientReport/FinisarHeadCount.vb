@@ -1,16 +1,47 @@
 ﻿Imports System
 
 Public Class FinisarHeadCount
-        Public Department As String = "OSA"
+    Public _Department As String = "OSA"
 
-        Public ProjectCode As String = ""
-        Public Headcount As Double = 0
+    Public _ProjectCode As String = ""
+    Public _Headcount As Double = 0
 
-    Public Remark As String = ""
+    Public _Remark As String = ""
     Public Sub New()
 
     End Sub
-
+    Property Headcount() As Double
+        Get
+            Headcount = _Headcount
+        End Get
+        Set(value As Double)
+            _Headcount = value
+        End Set
+    End Property
+    Property Department() As String
+        Get
+            Return _department
+        End Get
+        Set(value As String)
+            _department = value
+        End Set
+    End Property
+    Property ProjectCode() As String
+        Get
+            ProjectCode = _ProjectCode
+        End Get
+        Set(value As String)
+            _ProjectCode = value
+        End Set
+    End Property
+    Property Remark As String
+        Get
+            Remark = _Remark
+        End Get
+        Set(value As String)
+            _Remark = value
+        End Set
+    End Property
 End Class
 
 

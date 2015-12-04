@@ -42,7 +42,7 @@ namespace MiniUiAppCode
             return result;
 
         }
-        public static Task<Hashtable> Execute(string method, Hashtable parms)
+        public static Task<Hashtable> Execute(string method, Hashtable parms,ref Int64 requestid )
         {
             string strParams="";
             IEnumerator enu = parms.Keys.GetEnumerator();
@@ -51,9 +51,10 @@ namespace MiniUiAppCode
                 string parm = enu.Current.ToString() + "=" + Convert.ToString(parms[enu.Current.ToString()]);
                 strParams = strParams + parm + "&";
             }
-            
-          
 
+
+
+            strParams = strParams + "requestid=" + requestid.ToString()+"&";
 
 
              var result = Task<Hashtable>.Factory.StartNew(() =>

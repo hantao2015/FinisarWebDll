@@ -50,6 +50,10 @@
             this.dt_to = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -68,7 +72,7 @@
             this.txt_url.Name = "txt_url";
             this.txt_url.Size = new System.Drawing.Size(767, 21);
             this.txt_url.TabIndex = 1;
-            this.txt_url.Text = "http://121.199.9.136:8082/rispweb/";
+            this.txt_url.Text = "http://121.199.9.136:8093/rispweb/";
             // 
             // label1
             // 
@@ -97,6 +101,7 @@
             this.button3.TabIndex = 4;
             this.button3.Text = "2.\t获取项目代码出勤工时和人头数";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -106,6 +111,7 @@
             this.button4.TabIndex = 5;
             this.button4.Text = "3.\t获取工序出勤工时";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // txt_user
             // 
@@ -113,7 +119,7 @@
             this.txt_user.Name = "txt_user";
             this.txt_user.Size = new System.Drawing.Size(259, 21);
             this.txt_user.TabIndex = 6;
-            this.txt_user.Text = "001";
+            this.txt_user.Text = "24919";
             // 
             // txt_upass
             // 
@@ -143,7 +149,7 @@
             // 
             // txt_department
             // 
-            this.txt_department.Location = new System.Drawing.Point(402, 134);
+            this.txt_department.Location = new System.Drawing.Point(546, 80);
             this.txt_department.Name = "txt_department";
             this.txt_department.Size = new System.Drawing.Size(259, 21);
             this.txt_department.TabIndex = 10;
@@ -151,7 +157,7 @@
             // 
             // txt_ProductionStage
             // 
-            this.txt_ProductionStage.Location = new System.Drawing.Point(402, 161);
+            this.txt_ProductionStage.Location = new System.Drawing.Point(546, 107);
             this.txt_ProductionStage.Name = "txt_ProductionStage";
             this.txt_ProductionStage.Size = new System.Drawing.Size(259, 21);
             this.txt_ProductionStage.TabIndex = 11;
@@ -159,7 +165,7 @@
             // 
             // txt_ProjectCode
             // 
-            this.txt_ProjectCode.Location = new System.Drawing.Point(402, 188);
+            this.txt_ProjectCode.Location = new System.Drawing.Point(546, 134);
             this.txt_ProjectCode.Name = "txt_ProjectCode";
             this.txt_ProjectCode.Size = new System.Drawing.Size(259, 21);
             this.txt_ProjectCode.TabIndex = 12;
@@ -167,7 +173,7 @@
             // 
             // txt_StepNo
             // 
-            this.txt_StepNo.Location = new System.Drawing.Point(402, 215);
+            this.txt_StepNo.Location = new System.Drawing.Point(546, 161);
             this.txt_StepNo.Name = "txt_StepNo";
             this.txt_StepNo.Size = new System.Drawing.Size(259, 21);
             this.txt_StepNo.TabIndex = 13;
@@ -176,7 +182,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(337, 139);
+            this.label4.Location = new System.Drawing.Point(481, 85);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(41, 12);
             this.label4.TabIndex = 14;
@@ -185,7 +191,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(337, 164);
+            this.label5.Location = new System.Drawing.Point(481, 110);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 12);
             this.label5.TabIndex = 15;
@@ -194,7 +200,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(337, 194);
+            this.label6.Location = new System.Drawing.Point(481, 140);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(59, 12);
             this.label6.TabIndex = 16;
@@ -203,7 +209,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(337, 224);
+            this.label7.Location = new System.Drawing.Point(481, 170);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(53, 12);
             this.label7.TabIndex = 17;
@@ -211,14 +217,15 @@
             // 
             // dt_from
             // 
-            this.dt_from.Location = new System.Drawing.Point(412, 259);
+            this.dt_from.CustomFormat = "HH:mm:ss";
+            this.dt_from.Location = new System.Drawing.Point(546, 188);
             this.dt_from.Name = "dt_from";
             this.dt_from.Size = new System.Drawing.Size(200, 21);
             this.dt_from.TabIndex = 18;
             // 
             // dt_to
             // 
-            this.dt_to.Location = new System.Drawing.Point(412, 298);
+            this.dt_to.Location = new System.Drawing.Point(546, 215);
             this.dt_to.Name = "dt_to";
             this.dt_to.Size = new System.Drawing.Size(200, 21);
             this.dt_to.TabIndex = 19;
@@ -226,7 +233,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(343, 265);
+            this.label8.Location = new System.Drawing.Point(493, 194);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(29, 12);
             this.label8.TabIndex = 20;
@@ -235,17 +242,37 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(349, 307);
+            this.label9.Location = new System.Drawing.Point(493, 224);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(29, 12);
             this.label9.TabIndex = 21;
             this.label9.Text = "结束";
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(40, 281);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.Size = new System.Drawing.Size(577, 150);
+            this.dataGridView1.TabIndex = 22;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(652, 281);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowTemplate.Height = 23;
+            this.dataGridView2.Size = new System.Drawing.Size(465, 150);
+            this.dataGridView2.TabIndex = 23;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(859, 416);
+            this.ClientSize = new System.Drawing.Size(1159, 484);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dt_to);
@@ -271,6 +298,8 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -300,6 +329,8 @@
         private System.Windows.Forms.DateTimePicker dt_to;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }
 
