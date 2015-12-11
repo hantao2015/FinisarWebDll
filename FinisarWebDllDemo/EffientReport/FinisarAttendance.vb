@@ -6,7 +6,7 @@ Public Class FinisarAttendance
     Public _ProductionStage As String = "MP"
     Public _ProjectCode As String = ""
     Public _AttendanceHour As Double = 8.0
-    Public _StepNO As String = ""
+    Public _StepNo As String = ""
     Public _Remark As String = ""
     Public Sub New()
 
@@ -43,12 +43,12 @@ Public Class FinisarAttendance
             _AttendanceHour = value
         End Set
     End Property
-    Property StepNO() As String
+    Property StepNo() As String
         Get
-            StepNO = _StepNO
+            StepNo = _StepNo
         End Get
         Set(value As String)
-            _StepNO = value
+            _StepNo = value
         End Set
     End Property
     Property Remark As String

@@ -67,7 +67,7 @@ namespace FinisarWebDllDemoWindow
             string strStart = dFrom.ToString("yyyy-MM-dd HH:mm:ss");
             string strEnd = dTo.ToString("yyyy-MM-dd HH:mm:ss");
          
-            Int64 requestid = 502556682157;
+            Int64 requestid = 0;
          
 
             if (!(Ep == null)) {
@@ -103,7 +103,7 @@ namespace FinisarWebDllDemoWindow
             {
                 if (Ep.getAttendanceByProjCode(strDepartment, strStart, strEnd, ref attendances, ref headcounts, ref   requestid ))
                 {
-
+                    databind();
 
                 }
                 else
@@ -116,7 +116,7 @@ namespace FinisarWebDllDemoWindow
         private void databind()
         {
             dataGridView1.DataSource = attendances;
-            // dataGridView1.datab
+          
             dataGridView2.DataSource = headcounts;
 
 
@@ -139,7 +139,7 @@ namespace FinisarWebDllDemoWindow
                 if (Ep.getAttendanceByStepNo(strDepartment, strProjectCode, strProductionStage, strStepNO, strStart, strEnd, ref attendances,ref  requestid))
                 {
 
-
+                    databind();
                 }
                 else
                 {

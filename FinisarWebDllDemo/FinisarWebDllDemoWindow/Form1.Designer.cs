@@ -72,7 +72,7 @@
             this.txt_url.Name = "txt_url";
             this.txt_url.Size = new System.Drawing.Size(767, 21);
             this.txt_url.TabIndex = 1;
-            this.txt_url.Text = "http://121.199.9.136:8093/rispweb/";
+            this.txt_url.Text = "http://wux-hr01:8002/rispweb/";
             // 
             // label1
             // 
@@ -119,7 +119,7 @@
             this.txt_user.Name = "txt_user";
             this.txt_user.Size = new System.Drawing.Size(259, 21);
             this.txt_user.TabIndex = 6;
-            this.txt_user.Text = "24919";
+            this.txt_user.Text = "test001";
             // 
             // txt_upass
             // 

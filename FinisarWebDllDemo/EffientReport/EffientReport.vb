@@ -73,7 +73,7 @@ Public Class EffientReport
             att.ProductionStage = hs("ProductionStage")
             att.ProjectCode = hs("ProjectCode")
             att.Remark = hs("Remark")
-            att.StepNO = hs("StepNO")
+            att.StepNO = hs("StepNo")
             list.Add(att)
         Next
         Return list
