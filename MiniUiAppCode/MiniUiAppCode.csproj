@@ -60,6 +60,20 @@
     <Compile Include="Utils\PostHttpResponse.cs" />
     <Compile Include="Utils\TreeUtil.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\MiniUiAppCode.dll" />
+    <Content Include="bin\Debug\MiniUiAppCode.pdb" />
+    <Content Include="bin\Debug\MySql.Data.dll" />
+    <Content Include="bin\Debug\MySql.Web.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.Net20.dll" />
+    <Content Include="bin\MySql.Data.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\dll.rar" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
