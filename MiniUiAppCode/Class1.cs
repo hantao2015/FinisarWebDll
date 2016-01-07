@@ -6,5 +6,6 @@ namespace MiniUiAppCode
 {
     public class Class1
     {
+
     }
 }
