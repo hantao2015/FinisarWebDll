@@ -20,7 +20,7 @@ namespace MiniUiAppCode
                     updatedate = @updatedate,
                     folder = @folder,
                     num = @num
-                where id = @id";
+                where id = @id" ;
 
             DBUtil.Execute(sql, n);
         }
