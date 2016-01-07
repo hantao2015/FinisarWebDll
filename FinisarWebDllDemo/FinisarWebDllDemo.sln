@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniUiAppCode", "..\MiniUiAppCode\MiniUiAppCode.csproj", "{50B5C7E5-E78B-4B4A-A5C2-214A286F3183}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinisarWebDllDemoWindow", "FinisarWebDllDemoWindow\FinisarWebDllDemoWindow.csproj", "{6197F5CE-57BD-4040-A6A3-415C4E5161EB}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "EffientReport", "EffientReport\EffientReport.vbproj", "{1988E18D-4846-4EDF-B494-6474F09AFC43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50B5C7E5-E78B-4B4A-A5C2-214A286F3183}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50B5C7E5-E78B-4B4A-A5C2-214A286F3183}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50B5C7E5-E78B-4B4A-A5C2-214A286F3183}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50B5C7E5-E78B-4B4A-A5C2-214A286F3183}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6197F5CE-57BD-4040-A6A3-415C4E5161EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6197F5CE-57BD-4040-A6A3-415C4E5161EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6197F5CE-57BD-4040-A6A3-415C4E5161EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6197F5CE-57BD-4040-A6A3-415C4E5161EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1988E18D-4846-4EDF-B494-6474F09AFC43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1988E18D-4846-4EDF-B494-6474F09AFC43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1988E18D-4846-4EDF-B494-6474F09AFC43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1988E18D-4846-4EDF-B494-6474F09AFC43}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
