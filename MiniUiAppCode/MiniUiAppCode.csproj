@@ -69,9 +69,6 @@
     <Content Include="bin\MySql.Data.dll" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bin\Debug\dll.rar" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="bin\Release\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
