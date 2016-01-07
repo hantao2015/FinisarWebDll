@@ -65,7 +65,7 @@ namespace MiniUiAppCode
                     Encoding encoding = Encoding.UTF8;
                     string strurl = strBaseUrl + strExecutePage;
 
-                    string strJason = PostHttpResponse.GetStream(PostHttpResponse.CreatePostHttpResponseJson(strurl, "", "method=" + method + "&"+strParams + "clienttype=mobile", null, "", encoding, "", ref m_CookieContainer, true), encoding);
+                    string strJason = PostHttpResponse.GetStream(PostHttpResponse.CreatePostHttpResponseJson(strurl, "", "method=" + method + "&"+strParams + "clienttype=mobile", 300*1000, "", encoding, "", ref m_CookieContainer, true), encoding);
                     ReturnData = (Hashtable)MiniUiAppCode.JSON.Decode(strJason);
 
                 }
